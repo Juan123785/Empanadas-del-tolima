@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="empanada icon" type="png" href="image/Logoempandas.png">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" type="text/css" href="carrito.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <section id="Home">
+       <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/Logoempandas.png"></a>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Acerca de nosotros</a></li>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="index.html">Galeria</a></li> 
+            <li><a href="index.html">Opiniones</a></li>
+
+        </ul>
+
+        <div class="icon">
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="registro.html"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+       </nav>
+    </section>
+    
+  <div class="container">
+    <div class="login-box">
+      <a href="index.html"><img src="logofinal.png" class="avatar"></a>
+  </div>
+  <div class="gallary" id="Gallary">
+  <h1>Pide tu<span>empanada</span></h1>
+</div>
+    <div id="productos">
+      <div class="producto">
+        <h3>Empanada de carne</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanada de pollo</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanada ranchera</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div> 
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanada mexicana</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanada champiñones</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanada queso</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanada clasica</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Empanda hawaiana</h3>
+        <div class="image">
+          <img src="image/descarga.5.webp">
+        </div>
+        <p>Precio: $2000</p>
+        <button class="agregar" onclick="agregarProducto(2000)">Agregar al carrito</button>
+      </div>
+
+
+    <h2>Carrito</h2>
+    <div id="carrito">
+      <p>No hay productos en el carrito</p>
+    </div>
+    <button id="mostrarProductos" onclick="mostrarProductos()">Eliminar productos</button>
+    <br><br>
+    <button id="finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+
+    <div id="formulario" style="display: none;">
+      <h2>Formulario De Compra</h2>
+      <form action="carrito.php" name="pagina" method="post">
+          <label for="nombre">Ingrese Su Nombre </label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+  
+          <label for="apellido">Ingrese Su Apellido</label>
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+  
+          <label for="direccion">Ingrese Su Direccion</label>
+          <input type="text" name="direccion" id="direccion" placeholder="Direccion" required>
+  
+          <label for="correo">Ingrese Su Correo</label>
+          <input type="email" name="correo" id="correo" placeholder="Correo" required>
+  
+          <label for="telefono">Ingrese Su Telefono</label>
+          <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>
+  
+          <label for="metodopago">Ingrese Su Metodo De Pago</label>
+          <input type="text" name="metodopago" id="metodopago" placeholder="Paga Cuando Recibe">
+  
+          <input type="checkbox" id="mensajes">
+          <label for="mensajes"><span>Acepta Recibir Mensajes De Confirmacion De Su Compra.</span></label>
+  
+          <button type="submit" name="enviar">Enviar</button>
+      </form>
+  </div>
+    <script src="carrito.php"></script>
+    <script src="carrito.js"></script>
+  </div>
+</body>
+</html>
